@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Inspect.gg [V-0.0.1]</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html,
     body {
-      margin: 0;
-      padding: 0;
       font-family: 'Poppins', sans-serif;
       background: radial-gradient(circle at center, #0a0f1a 0%, #000814 100%);
       color: white;
@@ -46,34 +46,46 @@
     }
 
     .wrapper {
-      max-width: 1100px;
-      margin: 80px auto;
+      max-width: 1200px;
+      margin: 100px auto;
       padding: 0 20px;
       z-index: 1;
       position: relative;
     }
 
     .glass-box {
-      background: rgba(255, 255, 255, 0.035);
-      border: 1px solid rgba(0, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 255, 255, 0.2);
       border-radius: 20px;
       backdrop-filter: blur(14px);
       padding: 40px 30px;
-      box-shadow: 0 0 40px rgba(0, 255, 255, 0.08), 0 0 25px rgba(0, 255, 255, 0.05) inset;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.15), 0 0 25px rgba(0, 255, 255, 0.1) inset;
       margin-bottom: 50px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+
+    .glass-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 60px rgba(0, 255, 255, 0.25), 0 0 30px rgba(0, 255, 255, 0.1) inset;
     }
 
     .hero {
       text-align: center;
+      margin-bottom: 50px;
     }
 
     .hero img {
-      width: 190px;
+      width: 220px;
       filter: drop-shadow(0 0 25px #00ffff99);
+      transition: transform 0.3s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05);
     }
 
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       margin: 20px 0 10px;
       color: #a8f0f0;
       text-shadow: 0 0 12px #00ffff80;
@@ -121,7 +133,7 @@
     }
 
     .feature-card {
-      background: rgba(255, 255, 255, 0.025);
+      background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(0, 255, 255, 0.2);
       border-radius: 15px;
       padding: 20px;
@@ -132,12 +144,13 @@
 
     .feature-card:hover {
       transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.15);
     }
 
     .feature-card h3 {
       color: #00d9d9;
       margin-bottom: 10px;
+      font-weight: 600;
     }
 
     .feature-card p {
@@ -155,6 +168,7 @@
       font-size: 1.5rem;
       color: #00e0e0;
       margin-bottom: 15px;
+      font-weight: 700;
     }
 
     .notes li,
@@ -181,7 +195,7 @@
 
     @media (max-width: 600px) {
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
     }
   </style>
@@ -198,6 +212,7 @@
         <a class="discord-btn" href="https://discord.gg/XkrBPGUPN5" target="_blank">Join Discord</a>
       </div>
     </div>
+
     <div class="glass-box features">
       <div class="feature-card">
         <h3>🧊 Modern Design</h3>
@@ -212,6 +227,7 @@
         <p>Private & stealth-ready Gorilla Tag mod menus built in.</p>
       </div>
     </div>
+
     <div class="glass-box notes">
       <h3>🛠️ Compatibility</h3>
       <ul>
@@ -220,6 +236,7 @@
         <li>✔️ BepInEx 4.x</li>
       </ul>
     </div>
+
     <div class="glass-box paid">
       <h3>💎 Premium Gorilla Tag Menus</h3>
       <p>Upgrade your experience with our high-end mod templates:</p>
@@ -235,6 +252,7 @@
       <p><em>After payment, DM us with proof on Discord to receive the files instantly.</em></p>
     </div>
   </div>
+
   <script>
     function downloadOnly() {
       window.location.href = 'https://github.com/silentggontop-cell/Inpsect.gg.github.io/raw/refs/heads/main/Inpect.gg.dll';

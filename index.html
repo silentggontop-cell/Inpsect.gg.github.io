@@ -17,7 +17,6 @@
       font-family: 'Poppins', sans-serif;
       background: radial-gradient(circle at center, #0a0f1a 0%, #000814 100%);
       color: white;
-      scroll-behavior: smooth;
       overflow-x: hidden;
     }
 
@@ -32,7 +31,7 @@
       background-size: 25px 25px;
       animation: animateStars 100s linear infinite;
       z-index: 0;
-      opacity: 0.08;
+      opacity: 0.1;
     }
 
     @keyframes animateStars {
@@ -45,143 +44,143 @@
       }
     }
 
-    .wrapper {
+    .container {
       max-width: 1200px;
-      margin: 100px auto;
+      margin: 0 auto;
       padding: 0 20px;
-      z-index: 1;
-      position: relative;
     }
 
-    .glass-box {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(0, 255, 255, 0.2);
-      border-radius: 20px;
-      backdrop-filter: blur(14px);
-      padding: 40px 30px;
-      box-shadow: 0 0 40px rgba(0, 255, 255, 0.15), 0 0 25px rgba(0, 255, 255, 0.1) inset;
-      margin-bottom: 50px;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    }
-
-    .glass-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 60px rgba(0, 255, 255, 0.25), 0 0 30px rgba(0, 255, 255, 0.1) inset;
-    }
-
+    /* Hero Section */
     .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-bottom: 50px;
+      flex-direction: column;
+      position: relative;
+      background: linear-gradient(135deg, #005f73, #0a9396);
+      color: white;
     }
 
-    .hero img {
-      width: 220px;
+    .hero .logo {
+      width: 250px;
+      margin-bottom: 30px;
       filter: drop-shadow(0 0 25px #00ffff99);
       transition: transform 0.3s ease;
     }
 
-    .hero img:hover {
-      transform: scale(1.05);
+    .hero .logo:hover {
+      transform: scale(1.1);
     }
 
     .hero h1 {
-      font-size: 4rem;
-      margin: 20px 0 10px;
+      font-size: 3rem;
       color: #a8f0f0;
+      margin-bottom: 10px;
       text-shadow: 0 0 12px #00ffff80;
     }
 
     .hero p {
       font-size: 1.2rem;
       color: #a0cfcf;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
-    .buttons {
+    .hero .buttons {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       flex-wrap: wrap;
     }
 
-    .button,
-    .discord-btn {
-      background: linear-gradient(to right, #005f73, #0a9396);
-      border: none;
-      color: white;
-      padding: 14px 32px;
+    .hero .button,
+    .hero .discord-btn {
+      padding: 16px 30px;
       font-size: 16px;
+      font-weight: 600;
       border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
       text-decoration: none;
+      transition: all 0.3s ease;
       display: inline-block;
       box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
     }
 
-    .button:hover,
-    .discord-btn:hover {
+    .hero .button {
+      background: #00d9d9;
+      color: white;
+    }
+
+    .hero .discord-btn {
+      background: #0a9396;
+      color: white;
+    }
+
+    .hero .button:hover,
+    .hero .discord-btn:hover {
       transform: scale(1.05);
       box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
     }
 
+    /* Features Section */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin: 60px 0;
     }
 
     .feature-card {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(0, 255, 255, 0.2);
-      border-radius: 15px;
-      padding: 20px;
+      border-radius: 12px;
+      padding: 30px;
       text-align: center;
-      transition: transform 0.2s, background 0.3s;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.05), inset 0 0 5px rgba(0, 255, 255, 0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
     }
 
     .feature-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-10px);
+      background: rgba(0, 255, 255, 0.15);
     }
 
     .feature-card h3 {
+      font-size: 1.6rem;
       color: #00d9d9;
-      margin-bottom: 10px;
-      font-weight: 600;
+      margin-bottom: 15px;
     }
 
     .feature-card p {
       color: #cdefff;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
+    /* Notes & Premium Sections */
     .notes,
     .paid {
-      margin-top: 40px;
+      background: rgba(0, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 60px;
     }
 
     .notes h3,
     .paid h3 {
       font-size: 1.5rem;
       color: #00e0e0;
-      margin-bottom: 15px;
       font-weight: 700;
+      margin-bottom: 20px;
     }
 
     .notes li,
     .paid li {
       color: #a0dede;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .paid {
-      background: rgba(0, 255, 255, 0.03);
-      padding: 25px;
-      border-radius: 20px;
-      border: 1px solid rgba(0, 255, 255, 0.15);
+      background: rgba(0, 255, 255, 0.1);
     }
 
     .paid p {
@@ -195,25 +194,35 @@
 
     @media (max-width: 600px) {
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.4rem;
+      }
+
+      .feature-card p {
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="glass-box hero">
-      <img src="https://i.ibb.co/fdMC62fT/image-removebg-preview.png" alt="Inspect.gg Logo">
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="https://i.ibb.co/fdMC62fT/image-removebg-preview.png" alt="Inspect.gg Logo" class="logo">
       <h1>Inspect.gg v0.0.1</h1>
-      <p>Powerful stealth tools wrapped in elegance.<br>Clean. Fast. Undetected.</p>
+      <p>Powerful stealth tools wrapped in elegance. Clean. Fast. Undetected.</p>
       <div class="buttons">
         <button class="button" onclick="downloadOnly()">Download</button>
         <a class="discord-btn" href="https://discord.gg/XkrBPGUPN5" target="_blank">Join Discord</a>
       </div>
-    </div>
+    </section>
 
-    <div class="glass-box features">
+    <!-- Features Section -->
+    <section class="features">
       <div class="feature-card">
         <h3>🧊 Modern Design</h3>
         <p>A futuristic interface built for speed and beauty.</p>
@@ -226,18 +235,20 @@
         <h3>👻 Undetected Mods</h3>
         <p>Private & stealth-ready Gorilla Tag mod menus built in.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="glass-box notes">
+    <!-- Compatibility Notes -->
+    <section class="notes">
       <h3>🛠️ Compatibility</h3>
       <ul>
         <li>✔️ BepInEx 6.x</li>
         <li>✔️ BepInEx 5.x</li>
         <li>✔️ BepInEx 4.x</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="glass-box paid">
+    <!-- Premium Gorilla Tag Menus -->
+    <section class="paid">
       <h3>💎 Premium Gorilla Tag Menus</h3>
       <p>Upgrade your experience with our high-end mod templates:</p>
       <ul>
@@ -250,7 +261,7 @@
       <p><strong>Payment Method:</strong> Cash App</p>
       <p><strong>Send Payment To:</strong> <span>JayJayLXMN</span> via Cash App</p>
       <p><em>After payment, DM us with proof on Discord to receive the files instantly.</em></p>
-    </div>
+    </section>
   </div>
 
   <script>
